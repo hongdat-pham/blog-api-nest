@@ -1,13 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
+import { PostsService } from './posts.service';
 
 @Controller('posts')
 export class PostsController {
+  constructor(private readonly postsService: PostsService) {}
+
   @Get()
   findAll() {
-    return [
-      { id: 1, title: 'Bài viết đầu tiên', content: 'Nội dung 1' },
-      { id: 2, title: 'Bài viết thứ hai', content: 'Nội dung 2' },
-      { id: 3, title: 'Bài viết thứ ba', content: 'Nội dung 3' },
-    ];
+    return this.postsService.findAll();
   }
 }
