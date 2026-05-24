@@ -33,7 +33,7 @@ export class PostsController {
 
   @Patch(':id')
   update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdatePostDto) {
-    return this.postsService.update(id, dto);
+    return this.postsService.update(+id, dto);
   }
 
   @Delete(':id')
