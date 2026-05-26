@@ -13,9 +13,7 @@ export interface Post {
 export class PostsService {
   private posts: Post[] = [];
   private nextId = 1;
-
   constructor(private readonly logger: LoggerService) {}
-
   findAll(): Post[] {
     this.logger.log('PostsService', 'findAll called');
     return this.posts;
