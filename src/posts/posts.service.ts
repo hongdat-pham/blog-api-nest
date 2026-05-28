@@ -8,7 +8,6 @@ export interface Post {
   content: string;
   createdAt: Date;
 }
-
 @Injectable()
 export class PostsService {
   private posts: Post[] = [];

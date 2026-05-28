@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { PostsModule } from './posts/posts.module';
 import { LoggerService } from './logger/logger.service';
 import { LoggerModule } from './logger/logger.module';
-
 @Module({
   imports: [PostsModule, LoggerModule],
   controllers: [AppController],
